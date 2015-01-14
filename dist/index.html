@@ -1,50 +1,10 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Bob's Bagels</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="bagelman.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-
-    <!-- Vendor CSS -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- App CSS -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
-      <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-
-  </head>
-  <body class="main-body">
-    <!--[if lt IE 10]>
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>Bob's Bagels</title> <meta name=description content=""> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=d7e63885.bagelman.png> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <!-- Vendor CSS --> <link rel=stylesheet href=styles/9c307a9d.vendor.css> <!-- App CSS --> <link rel=stylesheet href=styles/647816d9.main.css>  <body class=main-body> <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div id="navigation">
-      <ul>
-        <li><a href="#">Bob's Bagels</a></li>
-        <li role="presentation"><a href="#/home">Home</a></li>
-        <li role="presentation"><a href="#/menu">Menu</a></li>
-        <li role="presentation"><a href="#/about">About</a></li>
-        <li role="presentation"><a href="#/contact">Contact</a></li>
-        <li role="presentation"><a href="#/cart">Cart</a></li>
-      </ul>
-    </div>
-
-    <div class="container-fluid">
-      <!--
+    <![endif]--> <div id=navigation> <ul> <li><a href=#>Bob's Bagels</a></li> <li role=presentation><a href=#/home>Home</a></li> <li role=presentation><a href=#/menu>Menu</a></li> <li role=presentation><a href=#/about>About</a></li> <li role=presentation><a href=#/contact>Contact</a></li> <li role=presentation><a href=#/cart>Cart</a></li> </ul> </div> <div class=container-fluid> <!--
       <script id="home" type="text/x-handlebars-template">
           <h1>Home</h1>
       </script>
-      -->
-      <script id="menu-temp" type="text/x-handlebars-template">
-        <div class="row">
+      --> <script id=menu-temp type=text/x-handlebars-template><div class="row">
           <div class="col-md-8">
             <h1>Menu</h1>
             <ul id="menu-list">
@@ -70,21 +30,13 @@
               <input class="actions" type="submit" value="Place Order"/>
             </div>
           </div>
-        </div>
-      </script>
-
-      <script id="cart-temp" type="text/x-handlebars-template">
-        <h1>Cart</h1>
+        </div></script> <script id=cart-temp type=text/x-handlebars-template><h1>Cart</h1>
           <ul>
             {{#each order_items}}
                 <li><a class="js-delete-item" href="#">X</a> <a class="order-item">{{ name }}</a><span class="price"> {{ price }}</span></li>
             {{/each}}
           </ul>
-          <input class="actions" type="submit" value="Place Order"/>
-      </script>
-
-      <script id="about-temp" type="text/x-handlebars-template">
-        <div class="row">
+          <input class="actions" type="submit" value="Place Order"/></script> <script id=about-temp type=text/x-handlebars-template><div class="row">
           <div class="col-md-4">
             <h3>Bagels - made with love from only the freshest ingredients</h3>
           </div>
@@ -97,11 +49,7 @@
           <div class="col-md4">
             <img src="styles/images/bob.jpg" alt="Bob of Bob's Bagels">
           </div>
-        </div>
-      </script>
-
-      <script id="contact-temp" type="text/x-handlebars-template">
-          <div class="row">
+        </div></script> <script id=contact-temp type=text/x-handlebars-template><div class="row">
             <div class="col-md-4">
               <h3>Bagels - made with love from only the freshest ingredients</h3>
             </div>
@@ -109,11 +57,7 @@
           <h1>Contact (CCH site developers)</h1>
           <h3><a class="menu" href="https://www.linkedin.com/in/corrinelin" target="_blank">Corrine Lin</h3>
           <h3><a class="menu" href="https://www.linkedin.com/in/cenkyurtbilir" target="_blank">Cenk Yurtbilir</h3>
-          <h3><a class="menu" href="http://www.linkedin.com/in/hollycmoody" target="_blank">Holly Moody</h3>
-      </script>
-
-       <script id="checkout-temp" type="text/x-handlebars-template">
-          <h1>Order Summary</h1>
+          <h3><a class="menu" href="http://www.linkedin.com/in/hollycmoody" target="_blank">Holly Moody</h3></script> <script id=checkout-temp type=text/x-handlebars-template><h1>Order Summary</h1>
             <ul>
               {{#each order_items}}
                  <li><a class="order-item">{{ name }}</a><span class="price"> {{ price }}</span></li>
@@ -184,31 +128,7 @@
               </div>
 
               <button type="submit" class="actions" id="checkout-button">Submit Payment</button>
-            </form>
-      </script>
-
-      <script id="conf-temp" type="text/x-handlebars-template">
-        <h1>Order Confirmation - Thank you for visiting today!</h1>
-      </script>
-
-      <div class="container">
-          <div id="content"></div>
-      </div>
-
-      <!-- build:js(.) scripts/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/underscore/underscore.js"></script>
-      <script src="bower_components/backbone/backbone.js"></script>
-      <script src="bower_components/handlebars/handlebars.js"></script>
-      <script src="bower_components/jquery-ui/jquery-ui.js"></script>
-      <!-- endbower -->
-      <!-- endbuild -->
-
-
-    </div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--
+            </form></script> <script id=conf-temp type=text/x-handlebars-template><h1>Order Confirmation - Thank you for visiting today!</h1></script> <div class=container> <div id=content></div> </div> <script src=scripts/3d2fed9c.vendor.js></script> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <!--
 =begin
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -219,31 +139,6 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 =end
--->
-
-
-
-
-
-  <!-- Vendor Javascript -->
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/underscore/underscore.js"></script>
-  <script src="bower_components/backbone/backbone.js"></script>
-  <script src="bower_components/handlebars/handlebars.js"></script>
-  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- App javascript -->
-  <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/main.js"></script>
-  <script src="templates/templates.js"></script>
-  <!-- endbuild -->
-
-        <!-- INCLUDE WHEN READY FOR PRODUCTION
+--> <!-- Vendor Javascript --> <script src=scripts/3d2fed9c.vendor.js></script> <!-- App javascript --> <script src=scripts/850318f1.scripts.js></script> <!-- INCLUDE WHEN READY FOR PRODUCTION
         // <script src="bower_components/handlebars/handlebars.runtime.js"></script>
-        -->
-</body>
-</html>
+        -->  

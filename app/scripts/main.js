@@ -3,8 +3,8 @@
 var CCHBBClient = {
   jsonAppend: '.json',
   // baseURL: 'https://warm-meadow-1723.herokuapp.com/',
-  // baseURL: 'https://cch-bobsbagels-api.herokuapp.com/',
-  baseURL: 'http://localhost:3000/',
+  // baseURL: 'http://localhost:3000/',
+  baseURL: 'https://cch-bobs-bagels-api.herokuapp.com/',
 
   cart: {
     orders: []
@@ -190,7 +190,7 @@ $(function() {
 
   CCHBBClient.addEvents();
 
-  Stripe.setPublishableKey('pk_test_0fbtu0To5Q8TurGcFy6XZ505');
+  // Stripe.setPublishableKey('pk_test_0fbtu0To5Q8TurGcFy6XZ505');
 
   $('#content').on('click', '#checkout-button', function(event) {
 

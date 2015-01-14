@@ -1,9 +1,28 @@
 {
-  "name": "cchbobsbaglesclient",
+  "name": "CCHBobsBaglesClient",
   "private": true,
   "dependencies": {
     "bootstrap": "~3.2.0",
     "backbone": "~1.1.2",
-    "handlebars": "~2.0.0"
-  }
+    "handlebars": "~2.0.0",
+    "jquery-ui": "~1.11.2",
+    "jquery": "~2.1.3"
+  },
+  "version": "1.0",
+  "homepage": "https://github.com/HollyM021980/CCHBobsBagelsClient-NEW",
+  "authors": [
+    "Corrine Lin corriner.lin@gmail.com",
+    "Cenk Yurtbilir cenky92@gmail.com",
+    "Holly Moody hollymoody@charter.net"
+  ],
+  "description": "Client for Bobs Bagels ECommerce app.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

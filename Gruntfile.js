@@ -35,21 +35,21 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= config.app %>/scripts/{,*/}*.js'],
+        files: ['<%= config.app %>/scripts/**/*.js'],
         tasks: ['jshint'],
         options: {
           livereload: true
         }
       },
       jstest: {
-        files: ['test/spec/{,*/}*.js'],
+        files: ['test/spec/**/*.js'],
         tasks: ['test:watch']
       },
       gruntfile: {
         files: ['Gruntfile.js']
       },
       styles: {
-        files: ['<%= config.app %>/styles/{,*/}*.css'],
+        files: ['<%= config.app %>/styles/**/*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       livereload: {
@@ -57,9 +57,10 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= config.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/**/*.html',
+          '.tmp/styles/**/*.css',
+          '<%= config.app %>styles/images/**/*.',
+          '<%= config.app %>/images/**/*.'
         ]
       }
     },
@@ -129,9 +130,9 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= config.app %>/scripts/{,*/}*.js',
+        '<%= config.app %>/scripts/**/*.js',
         '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
+        'test/spec/**/*.js'
       ]
     },
 
@@ -154,7 +155,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
+          src: '**/*.css',
           dest: '.tmp/styles/'
         }]
       }
@@ -174,10 +175,11 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
-            '<%= config.dist %>/styles/fonts/{,*/}*.*',
+            '<%= config.dist %>/scripts/**/*.js',
+            '<%= config.dist %>/styles/**/*.css',
+            // '<%= config.dist %>/images/**/*.*',
+            // '<%= config.dist %>/styles/images/**/*.*',
+            '<%= config.dist %>/styles/fonts/**/*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
         }
@@ -203,8 +205,8 @@ module.exports = function (grunt) {
           '<%= config.dist %>/styles'
         ]
       },
-      html: ['<%= config.dist %>/{,*/}*.html'],
-      css: ['<%= config.dist %>/styles/{,*/}*.css']
+      html: ['<%= config.dist %>/**/*.html'],
+      css: ['<%= config.dist %>/styles/**/*.css']
     },
 
     // The following *-min tasks produce minified files in the dist folder
@@ -212,9 +214,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
+          cwd: '<%= config.app %>/styles/images',
+          src: '**/*.{gif,jpeg,jpg,png}',
+          dest: '<%= config.dist %>/styles/images'
         }]
       }
     },
@@ -224,7 +226,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.app %>/images',
-          src: '{,*/}*.svg',
+          src: '**/*.svg',
           dest: '<%= config.dist %>/images'
         }]
       }
@@ -246,7 +248,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.dist %>',
-          src: '{,*/}*.html',
+          src: '**/*.html',
           dest: '<%= config.dist %>'
         }]
       }
@@ -259,8 +261,8 @@ module.exports = function (grunt) {
     //   dist: {
     //     files: {
     //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= config.app %>/styles/{,*/}*.css'
+    //         '.tmp/styles/**/*.css',
+    //         '<%= config.app %>/styles/**/*.css'
     //       ]
     //     }
     //   }
@@ -288,9 +290,9 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
-            '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'images/**/*.webp',
+            '**/*.html',
+            'styles/fonts/**/*.*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -308,7 +310,7 @@ module.exports = function (grunt) {
         dot: true,
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+        src: '**/*.css'
       }
     },
 
