@@ -4,7 +4,7 @@
 
 Web Application for Bob's Bagels :: GA Boston, WDI Fall 2014, Project #2
 
-This application consists of a UI built on Backbone and Bootstrap using Ajax calls to an API.
+This application consists of a UI built on Backbone and Bootstrap using Ajax calls to the Bob's Bagels API. The API is a Rails API backed by a Postgresql db leveraging JBuilder for serialization.
 
 [Bobs Bagels UI deployed on github pages](http://hollym021980.github.io/CCHBobsBagelsClient-NEW/)
 
